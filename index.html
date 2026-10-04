@@ -49,10 +49,13 @@
             justify-content: center;
             text-align: center;
             padding: 50px 20px;
-            background: linear-gradient(
-                rgba(23,37,84,0.85),
-                rgba(37,99,235,0.85)
-            );
+
+            background:
+                linear-gradient(
+                    rgba(23,37,84,0.88),
+                    rgba(37,99,235,0.88)
+                );
+
             color: white;
         }
 
@@ -110,7 +113,7 @@
             margin-bottom: 10px;
         }
 
-        /* APPLY FORM */
+        /* APPLY SECTION */
         .apply-section {
             background: #eaf0ff;
             padding: 60px 20px;
@@ -179,6 +182,7 @@
         }
 
         @media(max-width: 700px) {
+
             header {
                 flex-direction: column;
                 gap: 15px;
@@ -191,6 +195,10 @@
             .hero h1 {
                 font-size: 34px;
             }
+
+            .form-box {
+                padding: 25px;
+            }
         }
     </style>
 </head>
@@ -199,20 +207,28 @@
 
     <!-- HEADER -->
     <header>
-        <div class="logo">Bharathi Education Channel</div>
+
+        <div class="logo">
+            Bharathi Education Channel
+        </div>
 
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#apply">Apply</a>
         </nav>
+
     </header>
 
 
-    <!-- MAIN PAGE -->
+    <!-- HERO -->
     <section class="hero" id="home">
+
         <div>
-            <h1>Bharathi Education Channel</h1>
+
+            <h1>
+                Bharathi Education Channel
+            </h1>
 
             <p>
                 Learn • Grow • Achieve
@@ -221,14 +237,18 @@
             <a href="#apply" class="apply-btn">
                 Apply Now
             </a>
+
         </div>
+
     </section>
 
 
     <!-- ABOUT -->
     <section class="section" id="about">
 
-        <h2>Welcome to Bharathi Education Channel</h2>
+        <h2>
+            Welcome to Bharathi Education Channel
+        </h2>
 
         <p>
             Bharathi Education Channel provides quality education,
@@ -236,27 +256,45 @@
             and job seekers.
         </p>
 
+
         <div class="cards">
 
             <div class="card">
-                <h3>Education</h3>
+
+                <h3>
+                    Education
+                </h3>
+
                 <p>
                     Quality learning resources and educational guidance.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Career Guidance</h3>
+
+                <h3>
+                    Career Guidance
+                </h3>
+
                 <p>
                     Get guidance to build a successful career.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Job Opportunities</h3>
+
+                <h3>
+                    Job Opportunities
+                </h3>
+
                 <p>
                     Apply for available job and internship opportunities.
                 </p>
+
             </div>
 
         </div>
@@ -264,81 +302,216 @@
     </section>
 
 
-    <!-- RESUME APPLY -->
+    <!-- APPLICATION FORM -->
     <section class="apply-section" id="apply">
 
         <div class="form-box">
 
-            <h2>Resume / Job Application</h2>
-
-            <form id="applicationForm">
-
-                <label>Full Name</label>
-                <input type="text"
-                       id="name"
-                       placeholder="Enter your full name"
-                       required>
+            <h2>
+                Resume / Job Application
+            </h2>
 
 
-                <label>Mobile Number</label>
-                <input type="tel"
-                       id="phone"
-                       placeholder="Enter mobile number"
-                       required>
+            <!-- FORMSUBMIT -->
+            <form
+                action="https://formsubmit.co/kancharlatharun618@gmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+
+                <!-- EMAIL SETTINGS -->
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Resume Application - Bharathi Education Channel"
+                >
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                >
 
 
-                <label>Email</label>
-                <input type="email"
-                       id="email"
-                       placeholder="Enter email address"
-                       required>
+                <!-- FULL NAME -->
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    name="Full Name"
+                    placeholder="Enter your full name"
+                    required
+                >
 
 
-                <label>Qualification</label>
-                <select id="qualification" required>
-                    <option value="">Select Qualification</option>
-                    <option>10th</option>
-                    <option>Intermediate</option>
-                    <option>Diploma</option>
-                    <option>Degree</option>
-                    <option>B.Tech</option>
-                    <option>M.Tech</option>
-                    <option>MBA</option>
-                    <option>Other</option>
+                <!-- MOBILE -->
+
+                <label>
+                    Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    name="Mobile Number"
+                    placeholder="Enter mobile number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+
+                <!-- EMAIL -->
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    name="Applicant Email"
+                    placeholder="Enter email address"
+                    required
+                >
+
+
+                <!-- QUALIFICATION -->
+
+                <label>
+                    Qualification
+                </label>
+
+                <select
+                    name="Qualification"
+                    required
+                >
+
+                    <option value="">
+                        Select Qualification
+                    </option>
+
+                    <option>
+                        10th
+                    </option>
+
+                    <option>
+                        Intermediate
+                    </option>
+
+                    <option>
+                        Diploma
+                    </option>
+
+                    <option>
+                        Degree
+                    </option>
+
+                    <option>
+                        B.Tech
+                    </option>
+
+                    <option>
+                        M.Tech
+                    </option>
+
+                    <option>
+                        MBA
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
                 </select>
 
 
-                <label>Job Role</label>
-                <input type="text"
-                       id="jobRole"
-                       placeholder="Example: Software Engineer"
-                       required>
+                <!-- JOB ROLE -->
+
+                <label>
+                    Job Role
+                </label>
+
+                <input
+                    type="text"
+                    name="Job Role"
+                    placeholder="Example: Software Engineer"
+                    required
+                >
 
 
-                <label>Experience</label>
-                <select id="experience" required>
-                    <option value="">Select Experience</option>
-                    <option>Fresher</option>
-                    <option>0-1 Years</option>
-                    <option>1-3 Years</option>
-                    <option>3-5 Years</option>
-                    <option>5+ Years</option>
+                <!-- EXPERIENCE -->
+
+                <label>
+                    Experience
+                </label>
+
+                <select
+                    name="Experience"
+                    required
+                >
+
+                    <option value="">
+                        Select Experience
+                    </option>
+
+                    <option>
+                        Fresher
+                    </option>
+
+                    <option>
+                        0-1 Years
+                    </option>
+
+                    <option>
+                        1-3 Years
+                    </option>
+
+                    <option>
+                        3-5 Years
+                    </option>
+
+                    <option>
+                        5+ Years
+                    </option>
+
                 </select>
 
 
-                <label>Upload Resume</label>
-                <input type="file"
-                       id="resume"
-                       accept=".pdf,.doc,.docx"
-                       required>
+                <!-- RESUME -->
+
+                <label>
+                    Upload Resume
+                </label>
+
+                <input
+                    type="file"
+                    name="Resume"
+                    accept=".pdf,.doc,.docx"
+                    required
+                >
 
 
-                <label>Message</label>
-                <textarea id="message"
-                          placeholder="Write something about yourself"></textarea>
+                <!-- MESSAGE -->
+
+                <label>
+                    Message
+                </label>
+
+                <textarea
+                    name="Message"
+                    placeholder="Write something about yourself"
+                ></textarea>
 
 
-                <button type="submit" class="submit-btn">
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
                     Submit Application
                 </button>
 
@@ -350,133 +523,15 @@
 
 
     <!-- FOOTER -->
+
     <footer>
+
         <p>
-            © 2026 Bharathi Education Channel. All Rights Reserved.
+            © 2026 Bharathi Education Channel.
+            All Rights Reserved.
         </p>
+
     </footer>
-
-
-    <script>
-        document.getElementById("applicationForm")
-        .addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            alert("Application submitted successfully!");
-
-            document.getElementById("applicationForm").reset();
-
-        });
-    </script>
 
 </body>
 </html>
-<form action="https://formsubmit.co/kancharlatharun618@gmail.com"
-      method="POST"
-      enctype="multipart/form-data">
-
-    <input type="hidden" name="_subject"
-           value="New Job Application - Bharathi Education Channel">
-
-    <input type="hidden" name="_captcha" value="false">
-
-    <label>Full Name</label>
-    <input type="text" name="name" required>
-
-    <label>Mobile Number</label>
-    <input type="tel" name="phone" required>
-
-    <label>Email</label>
-    <input type="email" name="email" required>
-
-    <label>Qualification</label>
-    <input type="text" name="qualification" required>
-
-    <label>Job Role</label>
-    <input type="text" name="jobRole" required>
-
-    <label>Experience</label>
-    <input type="text" name="experience" required>
-
-    <label>Upload Resume</label>
-    <input type="file" name="resume"
-           accept=".pdf,.doc,.docx" required>
-
-    <label>Message</label>
-    <textarea name="message"></textarea>
-
-    <button type="submit">
-        Submit Application
-    </button>
-
-</form>
-<form action="https://formsubmit.co/kancharlatharun618@gmail.com"
-      method="POST"
-      enctype="multipart/form-data">
-
-    <!-- Email subject -->
-    <input type="hidden"
-           name="_subject"
-           value="New Resume Application - Bharathi Education Channel">
-
-    <!-- After submit -->
-    <input type="hidden"
-           name="_next"
-           value="https://yourwebsite.com/success.html">
-
-    <label>Full Name</label>
-    <input type="text"
-           name="Full Name"
-           placeholder="Enter your full name"
-           required>
-
-    <label>Mobile Number</label>
-    <input type="tel"
-           name="Mobile Number"
-           placeholder="Enter mobile number"
-           required>
-
-    <label>Email</label>
-    <input type="email"
-           name="Applicant Email"
-           placeholder="Enter email"
-           required>
-
-    <label>Qualification</label>
-    <input type="text"
-           name="Qualification"
-           placeholder="Enter qualification"
-           required>
-
-    <label>Job Role</label>
-    <input type="text"
-           name="Job Role"
-           placeholder="Example: Software Engineer"
-           required>
-
-    <label>Experience</label>
-    <select name="Experience" required>
-        <option value="">Select Experience</option>
-        <option>Fresher</option>
-        <option>0-1 Years</option>
-        <option>1-3 Years</option>
-        <option>3-5 Years</option>
-        <option>5+ Years</option>
-    </select>
-
-    <label>Upload Resume</label>
-    <input type="file"
-           name="Resume"
-           accept=".pdf,.doc,.docx"
-           required>
-
-    <label>Message</label>
-    <textarea name="Message"
-              placeholder="Write your message"></textarea>
-
-    <button type="submit">
-        Submit Application
-    </button>
-
-</form>
